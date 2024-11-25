@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs Component</title>
+  <style>
+    /* Base styles */
+    .tabs {
+      display: flex;
+      cursor: pointer;
+    }
+
+    .tab {
+      padding: 10px 20px;
+      margin-right: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .tab.active {
+      color: white;
+      background-color: blue;
+    }
+
+    .panel {
+      display: none;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-top: none;
+    }
+
+    .panel.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="tabs">
+    <div class="tab active" data-panel="panel1">Tab 1</div>
+    <div class="tab" data-panel="panel2">Tab 2</div>
+    <div class="tab" data-panel="panel3">Tab 3</div>
+  </div>
+
+  <div id="panel1" class="panel active">This is content for Tab 1</div>
+  <div id="panel2" class="panel">This is content for Tab 2</div>
+  <div id="panel3" class="panel">This is content for Tab 3</div>
+
+  <script src="tabs.js"></script>
+</body>
+</html>
